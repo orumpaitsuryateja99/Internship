@@ -149,25 +149,25 @@ classNames.forEach(className => {
 // console.log(container);
 
 
-// //task-4
-// document.addEventListener('DOMContentLoaded', function () {
-//     // Find all toggle buttons
-//     var toggleButtons = document.querySelectorAll('.toggle-button');
+//task-4
+document.addEventListener('DOMContentLoaded', function () {
+    // Find all toggle buttons
+    var toggleButtons = document.querySelectorAll('.toggle-button');
 
-//     // Add click event listener to each toggle button
-//     toggleButtons.forEach(function (button) {
-//         button.addEventListener('click', function () {
-//             // Find the corresponding additional details element
-//             var details = button.nextElementSibling;
+    // Add click event listener to each toggle button
+    toggleButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            // Find the corresponding additional details element
+            var details = button.nextElementSibling;
 
-//             // Toggle the visibility of additional details
-//             if (details.style.display === 'none') {
-//                 details.style.display = 'block';
-//                 button.textContent = 'Hide Details';
-//             } else {
-//                 details.style.display = 'none';
-//                 button.textContent = 'View Details';
-//             }
-//         });
-//     });
-// });
+            // Toggle the visibility of additional details
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+                button.textContent = 'Hide Details';
+            } else {
+                details.style.display = 'none';
+                button.textContent = 'View Details';
+            }
+        });
+    });
+});

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Contact & Help</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px; /* Add padding to the top to prevent the navigation bar from covering the form */
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 12px 20px;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    #confirmationMessage {
+      display: none;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <section class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <!-- Add your company logo here -->
+          <img class="company-logo" src="./images/logo.png" alt="Company Logo" />
+        </div>
+
+        <div class="navigation">
+          <ul class="nav-btns">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="instructors.html">Instructors</a></li>
+            <li><a href="contact.html">Contact & Help</a></li>
+            <li><a href="registration.html">Registration</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <h2>Contact & Help</h2>
+
+  <div class="form-container">
+    <form id="contactForm" action="/submit_contact_form" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div id="confirmationMessage">
+    <p>Thank you for contacting us. Your message has been submitted.</p>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+
+      // Perform any additional form validation or processing here
+
+      // Show the confirmation message
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('confirmationMessage').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

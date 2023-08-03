@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <title>Fitness Class Scheduler</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    header {
+      height: 80px; /* Adjust this height to match your actual navigation bar's height */
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto; /* Added margin to separate the form from the header */
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 12px 20px;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    #confirmationMessage {
+      display: none;
+      color: #4CAF50;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <!-- Add your company logo here -->
+                    <img class="company-logo" src="./images/logo.png" alt="Company Logo" />
+                </div>
+
+                <div class="navigation">
+                    <ul class="nav-btns">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="contact.html">Contact & Help</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+<h2>Book a Fitness Class</h2>
+
+<form id="bookingForm" action="/schedule_class" method="post">
+  <label for="class">Select Class:</label>
+  <select id="class" name="class" required>
+    <option value="" disabled selected>-- Select a Class --</option>
+    <option value="Yoga">Yoga</option>
+    <option value="Zumba">Zumba</option>
+    <option value="Pilates">Pilates</option>
+    <!-- Add more class options here -->
+  </select>
+
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date" required>
+
+  <label for="time">Time:</label>
+  <input type="time" id="time" name="time" required>
+
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <input type="submit" value="Schedule Class">
+</form>
+
+<div id="confirmationMessage">
+  <p>Thank you for booking a fitness class. Your class has been scheduled.</p>
+</div>
+
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Perform any additional form validation or processing here
+
+    // Show the confirmation message and hide the form
+    document.getElementById('bookingForm').style.display = 'none';
+    document.getElementById('confirmationMessage').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>

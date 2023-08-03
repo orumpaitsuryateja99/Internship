@@ -6,11 +6,36 @@
     <title>Health and Fitness Class Schedule</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        .class-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .class-item {
+            width: 300px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         .class-name {
             font-weight: bold;
-            color: #13c8e0;
-            /* color: red; */
+            color: #050606;
             margin-bottom: 5px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .class-timing {
@@ -20,11 +45,33 @@
         .class-instructor {
             color: red;
         }
+
+        .toggle-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .toggle-button:hover {
+            background-color: #45a049;
+        }
+
+        .additional-details {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
 <body>
-        <header>
+    <header>
         <section class="navbar">
             <div class="navbar-container">
                 <div class="logo">
@@ -36,31 +83,60 @@
                     <ul class="nav-btns">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="classes.html">Classes</a></li>
-                        <li><a href="#">Instructors</a></li>
-                        <li><a href="#">Contact & Help</a></li>
-                        <li><a href="#">Registration</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="contact.html">Contact & Help</a></li>
+                        <li><a href="registration.html">Registration</a></li>
                     </ul>
                 </div>
             </div>
         </section>
     </header>
+
     <div class="class-container" id="class-container">
+        <div class="class-item">
+            <div class="class-name">
+                <h2>Yoga Class</h2>
+                <p class="class-timing">Monday, 9:00 AM - 10:00 AM</p>
+                <p class="class-instructor">Instructor: John Doe</p>
+                <button class="toggle-button">View Details</button>
+                <div class="additional-details">
+                    <p>Class Description: Lorem ipsum dolor sit amet...</p>
+                    <p>Instructor Bio: John Doe is a certified yoga instructor...</p>
+                    <p>Prerequisites: No prior experience required.</p>
+                </div>
+            </div>
+        </div>
 
-    </div>
+        <div class="class-item">
+            <div class="class-name">
+                <h2>Zumba Class</h2>
+                <p class="class-timing">Tuesday, 5:00 PM - 6:00 PM</p>
+                <p class="class-instructor">Instructor: Jane Smith</p>
+                <button class="toggle-button">View Details</button>
+                <div class="additional-details">
+                    <p>Class Description: Lorem ipsum dolor sit amet...</p>
+                    <p>Instructor Bio: Jane Smith is a certified Zumba instructor...</p>
+                    <p>Prerequisites: No prior experience required.</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="class-name">
-        <h2>Yoga Class</h2>
-        <p>Monday, 9:00 AM - 10:00 AM</p>
-        <p>Instructor: John Doe</p>
-        <button class="toggle-button">View Details</button>
-        <div class="additional-details">
-            <p>Class Description: Lorem ipsum dolor sit amet...</p>
-            <p>Instructor Bio: John Doe is a certified yoga instructor...</p>
-            <p>Prerequisites: No prior experience required.</p>
+        <div class="class-item">
+            <div class="class-name">
+                <h2>Pilates Class</h2>
+                <p class="class-timing">Wednesday, 6:30 PM - 7:30 PM</p>
+                <p class="class-instructor">Instructor: Mike Johnson</p>
+                <button class="toggle-button">View Details</button>
+                <div class="additional-details">
+                    <p>Class Description: Lorem ipsum dolor sit amet...</p>
+                    <p>Instructor Bio: Mike Johnson is a certified Pilates instructor...</p>
+                    <p>Prerequisites: No prior experience required.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    
+    <script src="script.js"></script>
 </body>
 
 </html>
