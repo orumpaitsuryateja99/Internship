@@ -1,0 +1,77 @@
+.navbar {
+  padding: 1.5rem 2rem;
+  height: 4rem;
+  border-bottom: 5px solid #e8b949;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 500;
+}
+
+.navbar-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+
+.nav-btns li {
+  display: inline-block;
+  margin-right: 6rem;
+  font-size: 1.5rem;
+}
+
+.nav-btns a {
+  text-decoration: none;
+}
+
+.company-logo {
+  width: 4rem;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 16px;
+  color: #777;
+}
+
+.instructor {
+  font-weight: bold;
+  color: blue;
+}
+
+.class-schedule-container {
+  margin-top: 10rem;
+}
+
+.classes-data {
+  margin-top: 10rem;
+}
+
+.class-schedule {
+  margin-top: 10rem;
+}
+/* media queries */
+.class-container{
+    margin-top:10rem;
+}
+
+/* CSS rules for class name and timing elements */
+/* h2 {
+  font-size: 24px;
+ 
+
+ font-weight: bold;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 16px;
+  color: #b5f408;
+} */
